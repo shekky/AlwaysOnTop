@@ -167,10 +167,10 @@ namespace AlwaysOnTop
 						TrayIcon.ShowBalloonTip(500, "Settings", kMod + "+" + key + " Hotkey registered", ToolTipIcon.Info);
 					}
 				}
-                else
-                {
-                    gkh = new globalKeyboardHook();
-                }
+                //else
+                //{
+                //    gkh = new globalKeyboardHook();
+                //}
 				if (UPM == 1) { /* call method to enabled titlebar context menu*/ }
 
 			}
@@ -179,7 +179,7 @@ namespace AlwaysOnTop
 				MessageBox.Show(ex.ToString());
 				Xit(this,null);
 			}
-
+            
             Application.ApplicationExit += new EventHandler(this.OnApplicationExit);
         }
 

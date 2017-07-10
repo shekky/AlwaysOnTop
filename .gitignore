@@ -1,0 +1,8 @@
+# Ignore build files
+/obj/
+/bin/
+/packages/
+
+# Ignore VS files
+*.sln
+*.suo
