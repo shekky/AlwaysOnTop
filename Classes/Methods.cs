@@ -15,24 +15,23 @@ namespace AlwaysOnTop.Classes
 {
 
 	class Methods
-	{
-		/******** For GetWindowTitle() *********************/
-		[DllImport("user32.dll")]
+    {
+        #region imports
+        [DllImport("user32.dll")]
 		static extern IntPtr GetForegroundWindow();
 
 		[DllImport("user32.dll")]
 		static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
-		/*********** END ***********************************/
-
-		/********* Setting Windows on Top ******************/
 
 		[DllImport("user32.dll", EntryPoint = "SetWindowPos")]
 		public static extern IntPtr SetWindowPos(IntPtr hWnd, int hWndInsertAfter, int x, int Y, int cx, int cy, int wFlags);
 
 		[DllImport("user32.dll")]
 		static extern bool SetWindowText(IntPtr hWnd, string text);
+        #endregion
 
-		const UInt32 SW_HIDE = 0;
+        #region consts
+        const UInt32 SW_HIDE = 0;
 		const UInt32 SW_SHOWNORMAL = 1;
 		const UInt32 SW_NORMAL = 1;
 		const UInt32 SW_SHOWMINIMIZED = 2;
@@ -50,10 +49,9 @@ namespace AlwaysOnTop.Classes
 		const int SWP_NOACTIVATE = 0x0010;
 		const int HWND_TOPMOST = -1;
 		const int HWND_NOTOPMOST = -2;
-		/*********** END ***********************************/
+        #endregion
 
-
-		public static String GetWindowTitle()
+        public static String GetWindowTitle()
 		{
 			int i = 0;
 			while (i < 1)
@@ -68,7 +66,7 @@ namespace AlwaysOnTop.Classes
 				}
 			}
 			return null;
-		} // GetWindowTitle()
+		}
 
 		public static void AoT_on(string title)
 		{
@@ -86,9 +84,8 @@ namespace AlwaysOnTop.Classes
 						SetWindowText(handle, newTitle);
 					}
 				}
-				
 			}
-		} // AoT_on()
+		}
 
 		public static void AoT_off(string title)
 		{
@@ -107,7 +104,7 @@ namespace AlwaysOnTop.Classes
 					}
 				}
 			}
-		} // AoT_off()
+		}
 
 		public static string TryRegString(RegistryKey rk, string keyName, string value, bool overwrite)
 		{
@@ -182,7 +179,6 @@ namespace AlwaysOnTop.Classes
 
                     if(downloadUpdate == DialogResult.Yes)
                     {
-                        //MessageBox.Show(latest);
                         FormUpdate update = new FormUpdate(latest);
                         update.ShowDialog();
                     }

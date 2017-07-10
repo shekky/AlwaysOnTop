@@ -58,7 +58,6 @@
             this.chkRunAtLogin.TabIndex = 0;
             this.chkRunAtLogin.Text = "Run AlwaysOnTop at login";
             this.chkRunAtLogin.UseVisualStyleBackColor = true;
-            this.chkRunAtLogin.CheckedChanged += new System.EventHandler(this.chkRunAtLogin_CheckedChanged);
             // 
             // btnClose
             // 
@@ -89,7 +88,6 @@
             this.chkTitleContext.TabIndex = 3;
             this.chkTitleContext.Text = "Use Windows System Menus";
             this.chkTitleContext.UseVisualStyleBackColor = true;
-            this.chkTitleContext.CheckedChanged += new System.EventHandler(this.chkTitleContext_CheckedChanged);
             // 
             // chkHotKey
             // 
@@ -100,7 +98,6 @@
             this.chkHotKey.TabIndex = 4;
             this.chkHotKey.Text = "Use A Hotkey";
             this.chkHotKey.UseVisualStyleBackColor = true;
-            this.chkHotKey.CheckedChanged += new System.EventHandler(this.chkHotKey_CheckedChanged);
             // 
             // label2
             // 
@@ -140,7 +137,6 @@
             this.chkPermWindows.TabIndex = 22;
             this.chkPermWindows.Text = "Always put these windows on top:";
             this.chkPermWindows.UseVisualStyleBackColor = true;
-            this.chkPermWindows.CheckedChanged += new System.EventHandler(this.chkPermWindows_CheckedChanged);
             // 
             // listPermWindows
             // 
@@ -190,7 +186,6 @@
             this.chkDisableBalloonNotify.TabIndex = 27;
             this.chkDisableBalloonNotify.Text = "Disable Balloon Tip Notifications";
             this.chkDisableBalloonNotify.UseVisualStyleBackColor = true;
-            this.chkDisableBalloonNotify.CheckedChanged += new System.EventHandler(this.chkDisableBalloonNotify_CheckedChanged);
             // 
             // chkUpdateStart
             // 
@@ -201,7 +196,6 @@
             this.chkUpdateStart.TabIndex = 28;
             this.chkUpdateStart.Text = "Check for Updates at Start";
             this.chkUpdateStart.UseVisualStyleBackColor = true;
-            this.chkUpdateStart.CheckedChanged += new System.EventHandler(this.chkUpdateStart_CheckedChanged);
             // 
             // chkUpdateFreq
             // 
@@ -213,7 +207,6 @@
             this.chkUpdateFreq.TabIndex = 29;
             this.chkUpdateFreq.Text = "Check for updates every:";
             this.chkUpdateFreq.UseVisualStyleBackColor = true;
-            this.chkUpdateFreq.CheckedChanged += new System.EventHandler(this.chkUpdateFreq_CheckedChanged);
             // 
             // cmbUpdateFreq
             // 
@@ -265,6 +258,7 @@
             this.Controls.Add(this.chkRunAtLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FormSettings";
             this.Text = "AlwaysOnTop - Settings";
             this.Load += new System.EventHandler(this.FormSettings_Load);
