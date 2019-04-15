@@ -178,7 +178,5 @@ namespace AlwaysOnTop.Classes
 		{
 			this.Dispose();
 		}
-	}
-
-		
-	}
+	}		
+}

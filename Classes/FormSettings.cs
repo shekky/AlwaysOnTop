@@ -21,10 +21,11 @@ namespace AlwaysOnTop.Classes
 			Week = 7,
 			Month = 30
 		}
-		
+
 		public FormSettings()
 		{
             InitializeComponent();
+            addEvents(this.Controls);
 		}
 
 		void FormSettings_Load(object sender, EventArgs e)
@@ -92,41 +93,6 @@ namespace AlwaysOnTop.Classes
 			}
 
 			btnApply.Enabled = false; // Make this one last so a potential change from registry settings doesn't enable it.
-		}
-
-		private void chkRunAtLogin_CheckedChanged(object sender, EventArgs e)
-		{
-			btnApply.Enabled = true;
-		}
-
-		private void chkTitleContext_CheckedChanged(object sender, EventArgs e)
-		{
-			btnApply.Enabled = true;
-		}
-
-		private void chkHotKey_CheckedChanged(object sender, EventArgs e)
-		{
-			btnApply.Enabled = true;
-		}
-
-		private void chkPermWindows_CheckedChanged(object sender, EventArgs e)
-		{
-			btnApply.Enabled = true;
-		}
-
-        private void chkUpdateStart_CheckedChanged(object sender, EventArgs e)
-        {
-            btnApply.Enabled = true;
-        }
-
-        private void chkUpdateFreq_CheckedChanged(object sender, EventArgs e)
-        {
-            btnApply.Enabled = true;
-        }
-
-        private void chkDisableBalloonNotify_CheckedChanged(object sender, EventArgs e)
-		{
-			btnApply.Enabled = true;
 		}
 
 		private void btnSelectWindows_Click(object sender, EventArgs e)
@@ -221,7 +187,7 @@ namespace AlwaysOnTop.Classes
 						{
 
 						}
-						
+
 					}
 					catch (Exception ex)
 					{

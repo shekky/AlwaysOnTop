@@ -41,7 +41,7 @@ namespace AlwaysOnTop
 			Application.SetCompatibleTextRenderingDefault(false);
 			try
 			{
-				Application.Run(new MyCustomApplicationContext(args));
+				Application.Run(new AlwaysOnTopApplicationContext(args));
 			}
 			catch(Exception ex)
 			{

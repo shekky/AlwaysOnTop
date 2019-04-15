@@ -24,7 +24,7 @@ namespace AlwaysOnTop.Classes
 
 		private void btnRevertArrow_Click(object sender, EventArgs e)
 		{
-			MyCustomApplicationContext.RevertCursors();
+			AlwaysOnTopApplicationContext.RevertCursor();
 		}
 	}
 }

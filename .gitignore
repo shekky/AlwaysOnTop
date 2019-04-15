@@ -1,4 +1,8 @@
+# Ignore build files
 .idea
 bin
 obj
 packages
+
+# Ignore VS files
+*.suo
